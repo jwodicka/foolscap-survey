@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Token:</b>
+  <%= @survey_response.token %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @survey_response.email %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @survey_response.name %>
+</p>
+
+<p>
+  <b>Email preference:</b>
+  <%= @survey_response.email_preference %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @survey_response.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_response_path(@survey_response) %> |
+<%= link_to 'Back', survey_responses_path %>

@@ -1,0 +1,30 @@
+
+Behaviors:
+A user can see the list of panels and descriptions
+A user can indicate how strongly they would like to participate in a given panel
+A user can indicate whether they would like to moderate a given panel
+A user can indicate whether they would attend a given panel if they aren't on it
+
+A user's results are persisted as soon as they provide an input, not on completing a page
+
+A user can provide a name and e-mail to start a new survey
+A user can resume, review, and edit an existing survey given a secret token
+
+A user can suggest new panels, interests, or specialties as free text
+
+A user can indicate their availability for each broad time block
+A user can indicate their reg status
+
+A user can indicate their preference for receiving non-survey Foolscap e-mail
+
+A survey admin can maniuplate panel names and descriptions
+A survey admin can collect survey results
+
+
+Steps:
+- Create a Survey that one user can navigate and see panel descriptions
+- Allow them to indicate panel preferences
+- Persist these
+
+- Add ability to create a new Survey given a user e-mail
+

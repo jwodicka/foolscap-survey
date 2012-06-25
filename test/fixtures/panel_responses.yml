@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  panelist_interest: 1
+  would_moderate: false
+  would_attend: false
+
+two:
+  panelist_interest: 1
+  would_moderate: false
+  would_attend: false

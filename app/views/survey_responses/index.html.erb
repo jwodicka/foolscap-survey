@@ -1,0 +1,31 @@
+<h1>Listing survey_responses</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Email</th>
+    <th>Name</th>
+    <th>Email preference</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @survey_responses.each do |survey_response| %>
+  <tr>
+    <td><%= survey_response.token %></td>
+    <td><%= survey_response.email %></td>
+    <td><%= survey_response.name %></td>
+    <td><%= survey_response.email_preference %></td>
+    <td><%= survey_response.comment %></td>
+    <td><%= link_to 'Show', survey_response %></td>
+    <td><%= link_to 'Edit', edit_survey_response_path(survey_response) %></td>
+    <td><%= link_to 'Destroy', survey_response, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Survey response', new_survey_response_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@panel_response) do |f| %>
+  <% if @panel_response.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@panel_response.errors.count, "error") %> prohibited this panel_response from being saved:</h2>
+
+      <ul>
+      <% @panel_response.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :panelist_interest %><br />
+    <%= f.number_field :panelist_interest %>
+  </div>
+  <div class="field">
+    <%= f.label :would_moderate %><br />
+    <%= f.check_box :would_moderate %>
+  </div>
+  <div class="field">
+    <%= f.label :would_attend %><br />
+    <%= f.check_box :would_attend %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Panelist interest:</b>
+  <%= @panel_response.panelist_interest %>
+</p>
+
+<p>
+  <b>Would moderate:</b>
+  <%= @panel_response.would_moderate %>
+</p>
+
+<p>
+  <b>Would attend:</b>
+  <%= @panel_response.would_attend %>
+</p>
+
+
+<%= link_to 'Edit', edit_panel_response_path(@panel_response) %> |
+<%= link_to 'Back', panel_responses_path %>

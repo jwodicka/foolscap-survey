@@ -1,0 +1,27 @@
+<h1>Listing panel_responses</h1>
+
+<table>
+  <tr>
+    <th>Panelist interest</th>
+    <th>Would moderate</th>
+    <th>Would attend</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @panel_responses.each do |panel_response| %>
+  <tr>
+    <td><%= panel_response.panelist_interest %></td>
+    <td><%= panel_response.would_moderate %></td>
+    <td><%= panel_response.would_attend %></td>
+    <td><%= link_to 'Show', panel_response %></td>
+    <td><%= link_to 'Edit', edit_panel_response_path(panel_response) %></td>
+    <td><%= link_to 'Destroy', panel_response, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Panel response', new_panel_response_path %>

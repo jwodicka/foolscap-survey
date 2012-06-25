@@ -1,0 +1,43 @@
+
+Front page: user provides e-mail
+ - if e-mail has no SurveyResponse, generate a new one and redirect to SurveyPage for it
+ - otherwise, send user to StartedPage with resend link
+
+/sessions/new: landing page
+/survey_responses/<id> -- GET serves up a populated SurveyResponse with populated forms for each PanelResponse
+/panel_responses/<id> -- POST to persist user responses
+/panels
+
+SurveyResponse
+ - id guid
+ - Email email
+ - Name text
+ - AvailabilityResponse
+ - EmailPreference bool
+ - Comment text
+ - List<PanelResponse>
+
+PanelResponse - OK
+ - PanelResponseId
+ - PanelId
+ - PanelistInterest (3-point Liekert)
+ - ModeratorInterest bool
+ - AttendeeInterest bool
+
+Panel - OK
+ - PanelId
+ - name:string
+ - description:text
+ - List<Tag>
+
+AvailabilityResponse
+ - SurveyResponseId
+ - FriAfternoon bool
+ - FriEve bool
+ - SatAM bool
+ - SatAfternoon bool
+ - SatEve bool
+ - SunAM bool
+ - SunAfternoon bool
+
+

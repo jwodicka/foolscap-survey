@@ -1,0 +1,2 @@
+module PanelResponsesHelper
+end

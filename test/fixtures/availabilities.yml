@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fri_afternoon: false
+  fri_evening: false
+  sat_am: false
+  sat_afternoon: false
+  sat_evening: false
+  sun_am: false
+  sun_afternoon: false
+
+two:
+  fri_afternoon: false
+  fri_evening: false
+  sat_am: false
+  sat_afternoon: false
+  sat_evening: false
+  sun_am: false
+  sun_afternoon: false

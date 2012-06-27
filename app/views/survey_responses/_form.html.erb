@@ -31,6 +31,14 @@
     <%= f.label :comment %><br />
     <%= f.text_area :comment %>
   </div>
+
+  <% @survey_response.panel_responses.each do |response| %>
+  <div>
+    Here's a panel response <%= response.inspect %>
+    <%- @panel_response = response -%>
+    <%= render 'panel_responses/form' %>
+  </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

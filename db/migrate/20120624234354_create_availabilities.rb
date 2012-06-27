@@ -9,6 +9,8 @@ class CreateAvailabilities < ActiveRecord::Migration
       t.boolean :sun_am
       t.boolean :sun_afternoon
 
+      t.references :survey_response
+
       t.timestamps
     end
   end

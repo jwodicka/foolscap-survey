@@ -1,0 +1,8 @@
+<h1>Foolscap 14 Programming Survey</h1>
+
+<%= form_tag('/sessions', :method => 'post') do %>
+    <%= label_tag(:email, 'Enter your email to begin the survey:') %>
+    <%= text_field_tag(:email) %>
+    <%= submit_tag('Begin survey') %>
+<% end %>
+

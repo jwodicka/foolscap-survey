@@ -1,9 +1,10 @@
 FoolscapSurvey::Application.routes.draw do
-  get "sessions/new"
+#  get "sessions/new"
+#  get "sessions"
 
-  resources :survey_responses, :panel_responses, :panels
+  resources :sessions, :survey_responses, :panel_responses, :panels
 
-  # root :to => 'sessions/new'
+  root :to => 'sessions#new'
 
   # See how all your routes lay out with "rake routes"
   # Sample resource route (maps HTTP verbs to controller actions automatically):

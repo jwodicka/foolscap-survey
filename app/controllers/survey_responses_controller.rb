@@ -1,7 +1,23 @@
+
+require 'rubygems'
+require 'uuid'
 class SurveyResponsesController < ApplicationController
+  attr_accessor :survey_response
+
+  def generate_uuid
+    @@uuid_generator ||= UUID.generator
+    @@uuid_generator.generate
+  end
+
   # GET /survey_responses
   # GET /survey_responses.json
   def index
+    if params[:email]
+
+      redirect_to "/survey_responses/new?email=#{params[:email]}"
+      return
+    end
+
     @survey_responses = SurveyResponse.all
 
     respond_to do |format|
@@ -25,6 +41,10 @@ class SurveyResponsesController < ApplicationController
   # GET /survey_responses/new.json
   def new
     @survey_response = SurveyResponse.new
+    @survey_response.token = generate_uuid
+    @survey_response.email = params[:email]
+
+    @survey_response.build_panel_responses
 
     respond_to do |format|
       format.html # new.html.erb

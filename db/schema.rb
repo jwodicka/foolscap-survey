@@ -21,16 +21,19 @@ ActiveRecord::Schema.define(:version => 20120624234504) do
     t.boolean  "sat_evening"
     t.boolean  "sun_am"
     t.boolean  "sun_afternoon"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.integer  "survey_response_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "panel_responses", :force => true do |t|
     t.integer  "panelist_interest"
     t.boolean  "would_moderate"
     t.boolean  "would_attend"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.integer  "panel_id"
+    t.integer  "survey_response_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "panels", :force => true do |t|

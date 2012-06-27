@@ -5,6 +5,9 @@ class CreatePanelResponses < ActiveRecord::Migration
       t.boolean :would_moderate
       t.boolean :would_attend
 
+      t.references :panel
+      t.references :survey_response
+
       t.timestamps
     end
   end

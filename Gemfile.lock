@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:jfoy/surveyor.git
+  remote: https://github.com/jfoy/surveyor.git
   revision: 89e3836fe44c6d06028558085b8796bd04062fc5
   specs:
     surveyor (0.23.0.pre)

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 group :app do
   gem 'rails', '~> 3.2'
-  gem 'surveyor', :path => '~/src/personal/surveyor'
+  gem 'surveyor', :git => 'git@github.com:jfoy/surveyor.git'
   gem 'pg'
   gem 'jquery-rails'
   gem 'bcrypt-ruby', '~> 3.0' # To use ActiveModel has_secure_password

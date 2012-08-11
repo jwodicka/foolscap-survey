@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-SurveyorProto::Application.load_tasks
+FoolscapSurvey::Application.load_tasks

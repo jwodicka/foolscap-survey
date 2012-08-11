@@ -36,6 +36,19 @@ ActiveRecord::Schema.define(:version => 20120805054067) do
     t.string   "display_type"
   end
 
+  create_table "availabilities", :force => true do |t|
+    t.boolean  "fri_afternoon"
+    t.boolean  "fri_evening"
+    t.boolean  "sat_am"
+    t.boolean  "sat_afternoon"
+    t.boolean  "sat_evening"
+    t.boolean  "sun_am"
+    t.boolean  "sun_afternoon"
+    t.integer  "survey_response_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "dependencies", :force => true do |t|
     t.integer  "question_id"
     t.integer  "question_group_id"
@@ -59,6 +72,23 @@ ActiveRecord::Schema.define(:version => 20120805054067) do
     t.string   "response_other"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "panel_responses", :force => true do |t|
+    t.integer  "panelist_interest"
+    t.boolean  "would_moderate"
+    t.boolean  "would_attend"
+    t.integer  "panel_id"
+    t.integer  "survey_response_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "panels", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "question_groups", :force => true do |t|
@@ -131,6 +161,16 @@ ActiveRecord::Schema.define(:version => 20120805054067) do
   end
 
   add_index "responses", ["survey_section_id"], :name => "index_responses_on_survey_section_id"
+
+  create_table "survey_responses", :force => true do |t|
+    t.string   "token"
+    t.string   "email"
+    t.string   "name"
+    t.boolean  "email_preference"
+    t.text     "comment"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "survey_sections", :force => true do |t|
     t.integer  "survey_id"

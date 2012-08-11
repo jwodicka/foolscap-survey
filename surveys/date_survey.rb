@@ -1,4 +1,3 @@
-# encoding: UTF-8
 survey "Date Survey" do
 
   section "Simple date questions" do

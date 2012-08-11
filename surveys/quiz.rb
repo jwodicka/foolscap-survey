@@ -1,4 +1,3 @@
-# encoding: UTF-8
 survey "Favorites" do
   section "Foods" do
     # In a quiz, both the questions and the answers need to have reference identifiers

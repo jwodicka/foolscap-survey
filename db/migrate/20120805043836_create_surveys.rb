@@ -1,4 +1,3 @@
-# encoding: UTF-8
 class CreateSurveys < ActiveRecord::Migration
   def self.up
     create_table :surveys do |t|
@@ -16,12 +15,12 @@ class CreateSurveys < ActiveRecord::Migration
       # Expiry
       t.datetime :active_at
       t.datetime :inactive_at
-
+      
       # Display
       t.string :css_url
-
+      
       t.string :custom_class
-
+      
       t.timestamps
     end
   end

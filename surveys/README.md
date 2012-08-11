@@ -1,10 +1,6 @@
 # Surveys On Rails
 
-Surveyor is a developer tool that brings surveys into Rails
-applications. Surveys are written in the Surveyor DSL (Domain Specific
-Language). Internally, Surveyor is a Rails engine distributed as a
-ruby gem, meaning it is straightforward to override or extend its
-behaviors in your Rails app without maintaining a fork.
+Surveyor is a ruby gem and developer tool that brings surveys into Rails applications. Surveys are written in the Surveyor DSL (Domain Specific Language). Before Rails 2.3, it was implemented as a Rails Engine. It also existed previously as a plugin. Today it is a gem only.
 
 ## Why you might want to use Surveyor
 
@@ -59,7 +55,7 @@ The first question is "pick one" (radio buttons) with "other". The second questi
 
 # Installation
 
-Add surveyor to your Gemfile:
+1. Add surveyor to your Gemfile:
 
     gem "surveyor"
 
@@ -67,16 +63,16 @@ Then run:
 
     bundle install
 
-Generate assets, run migrations:
+2. Generate assets, run migrations:
 
     script/rails generate surveyor:install
     rake db:migrate
 
-Try out the "kitchen sink" survey. The rake task above generates surveys from our custom survey DSL (a good format for end users and stakeholders).
+3. Try out the "kitchen sink" survey. The rake task above generates surveys from our custom survey DSL (a good format for end users and stakeholders).
 
     rake surveyor FILE=surveys/kitchen_sink_survey.rb
 
-Start up your app and visit http://localhost:3000/surveys
+4. Start up your app and visit http://localhost:3000/surveys
 
 Try taking the survey and compare it to the contents of the DSL file kitchen\_sink\_survey.rb. See how the DSL maps to what you see.
 
@@ -90,13 +86,9 @@ There are two other useful rake tasks:
 
 Surveyor's controller, models, and views may be customized via classes in your app/models, app/helpers and app/controllers directories. To generate a sample custom controller and layout, run:
 
-    script/rails generate surveyor:custom
+`script/rails generate surveyor:custom`
 
 and read surveys/EXTENDING\_SURVEYOR
-
-# The asset pipeline
-
-Surveyor is now aware of the Rails asset pipeline (http://http://guides.rubyonrails.org/asset_pipeline.html). With the asset pipeline enabled (Rails.application.config.assets.enabled == true), then the surveyor:install generator will generate app/assets/stylesheets/surveyor\_all.css and app/assets/javascripts/surveyor\_all.js manifest files and link them from the surveyor\_default layout. Assets remain in the gem and are picked up for inclusion and pre-compilation from there. The previous copy-to-application behavior still exists in the case where the asset pipeline is missing or disabled.
 
 # PDF support
 
@@ -128,18 +120,17 @@ or on OSX:
 
 # Requirements
 
-Surveyor works with:
+Surveyor depends on:
 
-* Ruby 1.8.7, 1.9.2, and 1.9.3
-* Rails 3.0-3.2
-
-Some key library dependencies are:
-
+* Ruby (1.8.7 - 1.9.2)
+* Rails 3.0-3.1
 * HAML
-* Sass
-* Formtastic
+* SASS
+* fastercsv (or CSV for ruby 1.9) for csv exports
+* formtastic
+* UUID
 
-A more exhaustive list can be found in the gemspec.
+Specific versions of the gem dependencies are listed in the gemspec.
 
 # Contributing, testing
 

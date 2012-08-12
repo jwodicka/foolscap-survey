@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jfoy/surveyor.git
-  revision: 89e3836fe44c6d06028558085b8796bd04062fc5
+  revision: 7906505e799aa200f54472d47feb2c9cc8b92fee
   specs:
     surveyor (0.23.0.pre)
       fastercsv (~> 1.5.4)

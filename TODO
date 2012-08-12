@@ -1,3 +1,13 @@
+Done:
+ we can display a survey
+ someone can take a survey
+
+To do:
+ extend cmdline tools to dump results from cmdline
+ prove the results are getting persisted
+ add 'thin' for performance and to suppress streaming warnings
+ add users
+ get panel surveys from Jason
 
 Behaviors:
 A user can see the list of panels and descriptions

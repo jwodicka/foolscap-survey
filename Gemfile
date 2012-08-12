@@ -6,6 +6,7 @@ group :default do
   gem 'pg'
   gem 'jquery-rails'
   gem 'bcrypt-ruby', '~> 3.0' # To use ActiveModel has_secure_password
+  gem 'thin'
   gem 'unicorn'
 end
 

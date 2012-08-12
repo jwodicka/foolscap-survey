@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-group :app do
+group :default do
   gem 'rails', '~> 3.2'
   gem 'surveyor', :git => 'https://github.com/jfoy/surveyor.git'
   gem 'pg'

@@ -5,7 +5,7 @@ survey 'Foolscap 14 Panel Survey' do
     # Copy this block for every panel. Probably there's a cute Ruby way to automate this?
     # I don't want to copy-paste when we probably need to tweak it first. =)
 
-    q 'Would you like to be a panelist on this panel?', :pick => :one
+    q 'Would you like to be a panelist on this panel?', :pick => :one, :display_type => :inline
     a 'Please don\'t put me on this panel.'
     a 'I don\'t care if you put me on this panel.'
     a 'I\'d like to be on this panel.'
@@ -18,19 +18,16 @@ survey 'Foolscap 14 Panel Survey' do
     q 'What is your name?'
     a :string
 
-    q 'At what email address can Foolscap reach you with questions?'
-    a :string
-
-    q 'Can we add that email address to our mailing list?', :pick => :one
-    a 'Yes, you can email me a few times a year with info about Foolscap.'
-    a 'No, only get in touch with questions about this year\'s programming.'
-
     q 'What times do you expect to be available for panels?', :pick => :any
     a 'Friday Evening'
     a 'Saturday Morning'
     a 'Saturday Afternoon'
     a 'Saturday Evening'
     a 'Sunday Morning'
+    a 'Sunday Afternoon'
+    
+    q 'How many panels would you be willing to be on over the course of the convention?'
+    a :integer
   end
 
   section 'Art' do
@@ -66,7 +63,7 @@ survey 'Foolscap 14 Panel Survey' do
     panel 'What Makes a Great Hero? Explore the qualities of memorable heroic characters'
 
     panel 'Welcome to the Funhouse: Self-referential SF',
-      :desc => 'This is a panel that\'s all about itself. Or about stories that are about themselves. Examples: Diana Wynne Jones\' DEEP SECRET, Hubbard\'s "Typewriter in the Sky", most of K.M. O\'Donnell (Malzberg), Vonnegut\'s BREAKFAST OF CHAMPIONS, Michael Ende\'s THE NEVERENDING STORY, the Sesame Street book THE MONSTER AT THE END OF THIS BOOK, GalaxyQuest. See also http://www.nesfa.org/Recursion/index.htm'
+      :desc => 'This is a panel that\'s all about itself. Or about stories that are about themselves. Examples: Diana Wynne Jones\' DEEP SECRET, Hubbard\'s "Typewriter in the Sky", most of K.M. O\'Donnell (Malzberg), Vonnegut\'s BREAKFAST OF CHAMPIONS, Michael Ende\'s THE NEVERENDING STORY, the Sesame Street book THE MONSTER AT THE END OF THIS BOOK, GalaxyQuest. See also <a href="http://www.nesfa.org/Recursion/index.htm">Recursive Science Fiction</a>.'
 
     panel 'Alien Genitalia',
       :desc => 'When writers tackle sex scenes, is the result risible or touching? When they avoid them, is it laudable or laughable? Bring examples.'

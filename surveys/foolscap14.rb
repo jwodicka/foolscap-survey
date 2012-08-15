@@ -12,6 +12,9 @@ survey 'Foolscap 14 Panel Survey' do
 
     q 'I\'d be willing to moderate this panel.', :pick => :any, :display_type => :inline
     a 'Yes' 
+    
+    q 'I\'d go to this panel even if I\'m not a panelist', :pick => :any, :display_type => :inline
+    a 'Yes'
   end
 
   section 'Introduction' do

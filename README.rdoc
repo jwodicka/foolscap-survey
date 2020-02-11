@@ -1,3 +1,7 @@
+== Archived Repository
+
+This repo is an archive of a system that is not currently deployed anywhere. It is _definitely_ insecure, and probably not suitable for any purpose at all. I don't advise using it.
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
